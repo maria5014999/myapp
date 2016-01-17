@@ -1,0 +1,21 @@
+<div>
+	<form>
+  <label>Name: </label>
+  <input type="text" ng-model="newParty.name">
+  <label>Description: </label>
+  <input type="text" ng-model="newParty.description">
+  <button ng-click="addParty()">AÑADIR</button>
+
+</form>
+<br>
+<button ng-click="removeAll()">ELIMINAR TODO</button>
+
+<ul>
+    <li ng-repeat="party in parties">
+      <a href="/parties/{{party._id}}"> {{party.name}}</a>
+      {{party.name}}
+      <p>{{party.description}}</p>
+      <button ng-click="remove(party)">BORRAR</button>
+    </li>
+  </ul>
+</div>
